@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traceroute Visualizer</title>
+
+
+
+
+
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+    <script type="text/javascript" src="static\script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="static\style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="sidebar">
+            <div id='user_input_container'>
+                <div class="input_section">
+                    <label class="input_label" for="destination_url_or_ip">Enter URL or IP:</label>
+                    <input type="text" class="input_field" id="destination_url_or_ip" placeholder="8.8.8.8" required>
+                </div>
+                <div class="input_section">
+                    <label class="input_label" for="ping_attempts">Ping Attempts:</label>
+                    <input type="number" max="10" class="input_field" id="ping_attempts" placeholder="1-10">
+                </div>
+                <div class="input_section">
+                    <label class="input_label" for="ttl">TTL:</label>
+                    <input type="number" class="input_field" id="ttl" placeholder="1-255">
+                </div>
+                <div class="input_section">
+                    <label class="input_label" for="coordinate_offset_multiplier">Coord Offset:</label>
+                    <input type="number" class="input_field" id="coordinate_offset_multiplier" placeholder="0-1">
+                </div>
+                <button type="submit" class="input_field" id="tracert_button"
+                    onclick="server.tracert()">Tracert</button>
+            </div>
+            <div id="error_message"></div>
+            <div id="ip_url_stats_container"></div>
+            <div id="tracert_output_container"></div>
+        </div>
+
+        <div id='map'></div>
+    </div>
+</body>
+
+</html>
