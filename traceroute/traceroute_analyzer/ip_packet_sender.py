@@ -35,10 +35,10 @@ class IcmpPacket(AbstractIpPacket):
             print(f"An error occurred during packet construction: {e}")
             self.outgoing_packet = None  # Invalidate the packet
 
-    def send_packet(self) -> Optional[Packet]:
+    def send_packet(self, timeout: int = 5) -> Optional[Packet]:
         try:
             if self.outgoing_packet:
-                icmp_response = sr1(self.outgoing_packet)
+                icmp_response = sr1(self.outgoing_packet, timeout=timeout)
                 return icmp_response
             else:
                 print("Packet is not valid for sending.")

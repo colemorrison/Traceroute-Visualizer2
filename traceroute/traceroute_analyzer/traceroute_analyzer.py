@@ -56,7 +56,10 @@ class TracerouteAnalyzer:
                 coordinates = [coordinates[0] + (self.coordinate_offset_multiplier * ttl),
                                coordinates[1] + (self.coordinate_offset_multiplier * ttl)]
         else:
-            return None
+            # Create a placeholder object with default values
+            router_info = RouterData(
+                None, 'private', [], router_number, [None, None])
+            return router_info
 
         try:
             router_info = RouterData(
