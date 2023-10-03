@@ -64,6 +64,10 @@ The Traceroute Visualizer is built using the following technologies and librarie
 
 - **Languages:** Python, HTML, CSS, JavaScript
 - **Libraries:** Flask 3.0.0, jyserver 0.0.5, scapy 2.5.0, ip2geotools 0.1.6
+- **Applied Skills**
+  - SOLID Principles
+- **API**
+  - Mapbox ([Learn More](https://docs.mapbox.com/api/overview/))
 
 ## Contact Information
 
