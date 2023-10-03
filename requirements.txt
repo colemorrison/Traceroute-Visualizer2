@@ -1,0 +1,4 @@
+Flask==3.0.0
+ip2geotools==0.1.6
+jyserver==0.0.5
+scapy==2.5.0
