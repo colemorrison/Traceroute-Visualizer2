@@ -58,8 +58,6 @@ _When clicking on a router, a pop-up displays router information and delays._
 ![Link Line Details](readme-images/traceroute_visuliser_5.png)
 _This image demonstrates clicking on a link line to view information about the routers involved._
 
-These images help illustrate the different aspects and features of the Traceroute Visualizer application.
-
 ## Technology Stack
 
 The Traceroute Visualizer is built using the following technologies and libraries:
